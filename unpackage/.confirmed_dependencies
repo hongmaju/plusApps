@@ -1,0 +1,119 @@
+{
+  "index.html": {
+    "resources": [
+      "css/common.css",
+      "js/update.js",
+      "js/shortcut.js",
+      "js/immersed.js"
+    ],
+    "refer": [
+      "plus/accelerometer.html",
+      "plus/audio.html",
+      "plus/barcode.html",
+      "plus/downloader.html",
+      "plus/file.html",
+      "plus/geolocation.html",
+      "plus/maps.html",
+      "plus/message.html",
+      "plus/nativeui.html",
+      "plus/webview.html"
+    ]
+  },
+  "plus/accelerometer_shake.html": {
+    "resources": [
+      "img/shake/1.jpg",
+      "img/shakedown.png",
+      "img/shakeup.png",
+      "img/shake/3.jpg",
+      "img/shake/2.jpg",
+      "img/shake/4.jpg"
+    ]
+  },
+  "plus/accelerometer.html": {
+    "resources": [
+      "js/common.js"
+    ],
+    "refer": [
+      "plus/accelerometer_shake.html"
+    ]
+  },
+  "plus/audio.html": {
+    "resources": [
+      "img/astop.png",
+      "img/arecord.png"
+    ]
+  },
+  "plus/barcode.html": {
+    "resources": [
+      "img/barcode.png"
+    ],
+    "refer": [
+      "plus/barcode_scan.html",
+      "plus/barcode_scan2.html"
+    ]
+  },
+  "plus/file.html": {
+    "resources": [
+      "img/fdisk.png",
+      "img/fup.png"
+    ]
+  },
+  "plus/maps_map.html": {
+    "resources": [
+      "plus/maps_map_sub.html"
+    ],
+    "refer": [
+      "plus/maps_map_sub.html"
+    ]
+  },
+  "plus/maps.html": {
+    "refer": [
+      "plus/maps_map.html"
+    ]
+  },
+  "plus/webview_new.html": {
+    "resources": [
+      "img/ui.png"
+    ]
+  },
+  "plus/webview_animation.html": {
+    "refer": [
+      "plus/webview_new.html"
+    ]
+  },
+  "plus/webview.html": {
+    "refer": [
+      "plus/webview_embed.html",
+      "plus/webview_animation.html",
+      "plus/webview_pulltorefresh.html",
+      "plus/webview_mask.html",
+      "plus/webview_float.html"
+    ]
+  },
+  "plus/webview_pulltorefresh.html": {
+    "resources": [
+      "js/common.js",
+      "js/immersed.js"
+    ]
+  },
+  "plus/webview_mask.html": {
+    "resources": [
+      "js/common.js",
+      "js/immersed.js"
+    ],
+    "refer": [
+      "plus/webview_mask_side.html"
+    ]
+  },
+  "plus/webview_float.html": {
+    "resources": [
+      "js/common.js",
+      "img/ui.png"
+    ]
+  },
+  "plus/webview_mask_side.html": {
+    "resources": [
+      "js/common.js"
+    ]
+  }
+}
