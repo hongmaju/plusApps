@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>收藏</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.customer-navigate-delete::after {
+				content: '\e460';
+				color: red;
+			}
+		</style>
+		<script type="text/javascript">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的收藏</h1>
+		</header>
+		<div class="mui-content">
+			<div class="title">
+				餐饮分析
+			</div>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right customer-navigate-delete">
+						<img class="mui-media-object mui-pull-left" src="./images/asian_food.png">
+						<div class="mui-media-body">
+							账单明细
+							<p class="mui-ellipsis"></p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right customer-navigate-delete" href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="./images/cardiogram.png">
+						<div class="mui-media-body">
+							日汇总
+							<p class="mui-ellipsis"></p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right customer-navigate-delete">
+						<img class="mui-media-object mui-pull-left" src="./images/coin.png">
+						<div class="mui-media-body">
+							餐段汇总
+							<p class="mui-ellipsis"></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<div class="title">
+				酒店分析
+			</div>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right customer-navigate-delete">
+						<img class="mui-media-object mui-pull-left" src="./images/asian_food.png">
+						<div class="mui-media-body">
+							账单明细
+							<p class="mui-ellipsis"></p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right customer-navigate-delete" href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="./images/cardiogram.png">
+						<div class="mui-media-body">
+							日汇总
+							<p class="mui-ellipsis"></p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right customer-navigate-delete">
+						<img class="mui-media-object mui-pull-left" src="./images/coin.png">
+						<div class="mui-media-body">
+							按房价代码
+							<p class="mui-ellipsis"></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
