@@ -131,6 +131,16 @@
       "fonts/mui.ttf",
       "js/mui.js",
       "css/mui.css"
+    ],
+    "refer": [
+      "info.html"
+    ]
+  },
+  "plusReady.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
     ]
   }
 }
