@@ -141,6 +141,24 @@
       "fonts/mui.ttf",
       "js/mui.js",
       "css/mui.css"
+    ],
+    "refer": []
+  },
+  "openNewPageP2.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "openNewPageB.html"
+    ]
+  },
+  "openNewPageB.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
     ]
   }
 }
