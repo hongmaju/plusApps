@@ -170,5 +170,12 @@
     "refer": [
       "openNewPageWithTitleB.html"
     ]
+  },
+  "backPage.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ]
   }
 }
