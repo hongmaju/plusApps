@@ -27,7 +27,8 @@
       "img/shake/3.jpg",
       "img/shake/2.jpg",
       "img/shake/4.jpg"
-    ]
+    ],
+    "refer": []
   },
   "plus/accelerometer.html": {
     "resources": [
@@ -41,7 +42,8 @@
     "resources": [
       "img/astop.png",
       "img/arecord.png"
-    ]
+    ],
+    "refer": []
   },
   "plus/barcode.html": {
     "resources": [
@@ -56,7 +58,8 @@
     "resources": [
       "img/fdisk.png",
       "img/fup.png"
-    ]
+    ],
+    "refer": []
   },
   "plus/maps_map.html": {
     "resources": [
@@ -69,17 +72,20 @@
   "plus/maps.html": {
     "refer": [
       "plus/maps_map.html"
-    ]
+    ],
+    "resources": []
   },
   "plus/webview_new.html": {
     "resources": [
       "img/ui.png"
-    ]
+    ],
+    "refer": []
   },
   "plus/webview_animation.html": {
     "refer": [
       "plus/webview_new.html"
-    ]
+    ],
+    "resources": []
   },
   "plus/webview.html": {
     "refer": [
@@ -88,13 +94,15 @@
       "plus/webview_pulltorefresh.html",
       "plus/webview_mask.html",
       "plus/webview_float.html"
-    ]
+    ],
+    "resources": []
   },
   "plus/webview_pulltorefresh.html": {
     "resources": [
       "js/common.js",
       "js/immersed.js"
-    ]
+    ],
+    "refer": []
   },
   "plus/webview_mask.html": {
     "resources": [
@@ -109,11 +117,20 @@
     "resources": [
       "js/common.js",
       "img/ui.png"
-    ]
+    ],
+    "refer": []
   },
   "plus/webview_mask_side.html": {
     "resources": [
       "js/common.js"
+    ],
+    "refer": []
+  },
+  "openNewPage.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
     ]
   }
 }
