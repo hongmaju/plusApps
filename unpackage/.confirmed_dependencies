@@ -159,6 +159,16 @@
       "fonts/mui.ttf",
       "js/mui.js",
       "css/mui.css"
+    ],
+    "refer": []
+  },
+  "openNewPageWithTitle.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "openNewPageWithTitleB.html"
     ]
   }
 }
