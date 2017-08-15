@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>绑定事件Off</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				function foo_2() {
+					alert("绑定2");
+				}
+
+				function foo_1() {
+					alert("绑定1");
+				}
+				mui(".mui-table-view").on('tap', '.mui-table-view-cell', foo_2);
+				mui(".mui-table-view").on('tap', '.mui-table-view-cell', foo_1);
+				document.getElementById('bindOffbtn').addEventListener('tap', function() {
+					//					mui(".mui-table-view").off(); //取消标签.mui-table-view的所有事件
+					//					mui(".mui-table-view").off('tap'); //取消标签.mui-table-view的所有tab事件
+					//					mui(".mui-table-view").off('tap', '.mui-table-view-cell'); //取消标签.mui-table-view-cell的所有tab事件
+					mui(".mui-table-view").off('tap', '.mui-table-view-cell', foo_2); //取消标签.mui-table-view-cell的tab事件回调函数foo_2
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<ul class="mui-table-view" id="my_list">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项1
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项2
+					</div>
+				</li>
+			</ul>
+			<button type="button" id='bindOffbtn' class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">取消绑定</button>
+		</div>
+	</body>
+
+</html>

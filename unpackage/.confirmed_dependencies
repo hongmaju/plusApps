@@ -1,203 +1,227 @@
 {
-	"index.html": {
-		"resources": [
-			"css/common.css",
-			"js/update.js",
-			"js/shortcut.js",
-			"js/immersed.js"
-		],
-		"refer": [
-			"plus/accelerometer.html",
-			"plus/audio.html",
-			"plus/barcode.html",
-			"plus/downloader.html",
-			"plus/file.html",
-			"plus/geolocation.html",
-			"plus/maps.html",
-			"plus/message.html",
-			"plus/nativeui.html",
-			"plus/webview.html"
-		]
-	},
-	"plus/accelerometer_shake.html": {
-		"resources": [
-			"img/shake/1.jpg",
-			"img/shakedown.png",
-			"img/shakeup.png",
-			"img/shake/3.jpg",
-			"img/shake/2.jpg",
-			"img/shake/4.jpg"
-		],
-		"refer": []
-	},
-	"plus/accelerometer.html": {
-		"resources": [
-			"js/common.js"
-		],
-		"refer": [
-			"plus/accelerometer_shake.html"
-		]
-	},
-	"plus/audio.html": {
-		"resources": [
-			"img/astop.png",
-			"img/arecord.png"
-		],
-		"refer": []
-	},
-	"plus/barcode.html": {
-		"resources": [
-			"img/barcode.png"
-		],
-		"refer": [
-			"plus/barcode_scan.html",
-			"plus/barcode_scan2.html"
-		]
-	},
-	"plus/file.html": {
-		"resources": [
-			"img/fdisk.png",
-			"img/fup.png"
-		],
-		"refer": []
-	},
-	"plus/maps_map.html": {
-		"resources": [
-			"plus/maps_map_sub.html"
-		],
-		"refer": [
-			"plus/maps_map_sub.html"
-		]
-	},
-	"plus/maps.html": {
-		"refer": [
-			"plus/maps_map.html"
-		],
-		"resources": []
-	},
-	"plus/webview_new.html": {
-		"resources": [
-			"img/ui.png"
-		],
-		"refer": []
-	},
-	"plus/webview_animation.html": {
-		"refer": [
-			"plus/webview_new.html"
-		],
-		"resources": []
-	},
-	"plus/webview.html": {
-		"refer": [
-			"plus/webview_embed.html",
-			"plus/webview_animation.html",
-			"plus/webview_pulltorefresh.html",
-			"plus/webview_mask.html",
-			"plus/webview_float.html"
-		],
-		"resources": []
-	},
-	"plus/webview_pulltorefresh.html": {
-		"resources": [
-			"js/common.js",
-			"js/immersed.js"
-		],
-		"refer": []
-	},
-	"plus/webview_mask.html": {
-		"resources": [
-			"js/common.js",
-			"js/immersed.js"
-		],
-		"refer": [
-			"plus/webview_mask_side.html"
-		]
-	},
-	"plus/webview_float.html": {
-		"resources": [
-			"js/common.js",
-			"img/ui.png"
-		],
-		"refer": []
-	},
-	"plus/webview_mask_side.html": {
-		"resources": [
-			"js/common.js"
-		],
-		"refer": []
-	},
-	"openNewPage.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.js",
-			"css/mui.css"
-		],
-		"refer": [
-			"info.html"
-		]
-	},
-	"plusReady.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.js",
-			"css/mui.css"
-		],
-		"refer": []
-	},
-	"openNewPageP2.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.js",
-			"css/mui.css"
-		],
-		"refer": [
-			"openNewPageB.html"
-		]
-	},
-	"openNewPageB.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.js",
-			"css/mui.css"
-		],
-		"refer": []
-	},
-	"openNewPageWithTitle.html": {
-		"resources": [
-			"js/mui.js",
-			"css/mui.css"
-		],
-		"refer": [
-			"openNewPageWithTitleB.html"
-		]
-	},
-	"backPage.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.js",
-			"css/mui.css"
-		],
-		"refer": []
-	},
-	"preloadPages.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.js",
-			"css/mui.css"
-		],
-		"refer": [
-			"list.html",
-			"preloadPagesList.html"
-		]
-	},
-	"preload.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.js",
-			"css/mui.css"
-		],
-		"refer": [
-			"preloadPagesList.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "css/common.css",
+      "js/update.js",
+      "js/shortcut.js",
+      "js/immersed.js"
+    ],
+    "refer": [
+      "plus/accelerometer.html",
+      "plus/audio.html",
+      "plus/barcode.html",
+      "plus/downloader.html",
+      "plus/file.html",
+      "plus/geolocation.html",
+      "plus/maps.html",
+      "plus/message.html",
+      "plus/nativeui.html",
+      "plus/webview.html"
+    ]
+  },
+  "plus/accelerometer_shake.html": {
+    "resources": [
+      "img/shake/1.jpg",
+      "img/shakedown.png",
+      "img/shakeup.png",
+      "img/shake/3.jpg",
+      "img/shake/2.jpg",
+      "img/shake/4.jpg"
+    ],
+    "refer": []
+  },
+  "plus/accelerometer.html": {
+    "resources": [
+      "js/common.js"
+    ],
+    "refer": [
+      "plus/accelerometer_shake.html"
+    ]
+  },
+  "plus/audio.html": {
+    "resources": [
+      "img/astop.png",
+      "img/arecord.png"
+    ],
+    "refer": []
+  },
+  "plus/barcode.html": {
+    "resources": [
+      "img/barcode.png"
+    ],
+    "refer": [
+      "plus/barcode_scan.html",
+      "plus/barcode_scan2.html"
+    ]
+  },
+  "plus/file.html": {
+    "resources": [
+      "img/fdisk.png",
+      "img/fup.png"
+    ],
+    "refer": []
+  },
+  "plus/maps_map.html": {
+    "resources": [
+      "plus/maps_map_sub.html"
+    ],
+    "refer": [
+      "plus/maps_map_sub.html"
+    ]
+  },
+  "plus/maps.html": {
+    "refer": [
+      "plus/maps_map.html"
+    ],
+    "resources": []
+  },
+  "plus/webview_new.html": {
+    "resources": [
+      "img/ui.png"
+    ],
+    "refer": []
+  },
+  "plus/webview_animation.html": {
+    "refer": [
+      "plus/webview_new.html"
+    ],
+    "resources": []
+  },
+  "plus/webview.html": {
+    "refer": [
+      "plus/webview_embed.html",
+      "plus/webview_animation.html",
+      "plus/webview_pulltorefresh.html",
+      "plus/webview_mask.html",
+      "plus/webview_float.html"
+    ],
+    "resources": []
+  },
+  "plus/webview_pulltorefresh.html": {
+    "resources": [
+      "js/common.js",
+      "js/immersed.js"
+    ],
+    "refer": []
+  },
+  "plus/webview_mask.html": {
+    "resources": [
+      "js/common.js",
+      "js/immersed.js"
+    ],
+    "refer": [
+      "plus/webview_mask_side.html"
+    ]
+  },
+  "plus/webview_float.html": {
+    "resources": [
+      "js/common.js",
+      "img/ui.png"
+    ],
+    "refer": []
+  },
+  "plus/webview_mask_side.html": {
+    "resources": [
+      "js/common.js"
+    ],
+    "refer": []
+  },
+  "openNewPage.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "info.html"
+    ]
+  },
+  "plusReady.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "openNewPageP2.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "openNewPageB.html"
+    ]
+  },
+  "openNewPageB.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "openNewPageWithTitle.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "openNewPageWithTitleB.html"
+    ]
+  },
+  "backPage.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "preloadPages.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "list.html",
+      "preloadPagesList.html"
+    ]
+  },
+  "preload.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "preloadPagesList.html"
+    ]
+  },
+  "bindOn.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "info.html"
+    ]
+  },
+  "info.html": {
+    "resources": [
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "bindOff.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "info.html"
+    ]
+  }
 }
