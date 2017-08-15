@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>预加载例子2</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				var page = mui.preload({
+					url: 'preloadPagesList.html',
+					id: 'preloadPagesList'
+				});
+				
+				mui.openWindow({
+					url: 'preloadPagesList.html',
+					id: 'preloadPagesList'
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">打开新页面</h1>
+			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
+		</header>
+
+	</body>
+
+</html>
