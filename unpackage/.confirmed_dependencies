@@ -223,5 +223,11 @@
     "refer": [
       "info.html"
     ]
+  },
+  "trigger.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
+    ]
   }
 }

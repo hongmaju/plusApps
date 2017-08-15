@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>代码触发事件</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				var btn = document.getElementById("bindOffbtn");
+				btn.addEventListener('tap', function() {
+					alert("触发--取消绑定");
+
+				});
+
+				mui.trigger(btn, 'tap');
+
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+
+			<button type="button" id='bindOffbtn' class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">取消绑定</button>
+			
+		</div>
+	</body>
+
+</html>
