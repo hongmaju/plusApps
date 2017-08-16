@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ajax的用法</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			//初始化预加载详情页面
+			mui.init();
+
+			mui.plusReady(function() {
+				var btn = document.getElementById("bindOffbtn");
+				btn.addEventListener('tap', function() {
+					//完全的写法---------------------------------------------------------------
+					//					mui.ajax('http://192.168.1.116:8002/Manage/ManagerView/Ashx/plusApp.ashx', {
+					//						data: {
+					//							username: 'username',
+					//							password: 'password'
+					//						},
+					//						dataType: 'json', //服务器返回json格式数据
+					//						type: 'post', //HTTP请求类型
+					//						timeout: 10000, //超时时间设置为10秒；
+					//						headers: {
+					//							'Content-Type': 'application/json'
+					//						},
+					//						success: function(data) {
+					//							mui.alert(JSON.stringify(data));
+					//
+					//							//服务器返回响应，根据响应结果，分析是否登录成功；
+					//
+					//						},
+					//						error: function(xhr, type, errorThrown) {
+					//							//异常处理；
+					//							console.log(type);
+					//						}
+					//					});
+					//post方法-----------------------------------------------------------------------------
+					//					mui.post('http://192.168.1.116:8002/Manage/ManagerView/Ashx/plusApp.ashx', {
+					//						username: 'username',
+					//						password: 'password'
+					//					}, function(data) {
+					//						//服务器返回响应，根据响应结果，分析是否登录成功；
+					//						mui.alert(JSON.stringify(data));
+					//					}, 'json');
+
+					//get方法-----------------------------------------------------------------------------
+					//					mui.ajax('http://192.168.1.116:8002/Manage/ManagerView/Ashx/plusApp.ashx', {
+					//						data: {
+					//							category: 'news'
+					//						},
+					//						dataType: 'json', //服务器返回json格式数据
+					//						type: 'get', //HTTP请求类型
+					//						success: function(data) {
+					//							//获得服务器响应
+					//							mui.alert(JSON.stringify(data));
+					//						}
+					//					});
+					//get简化-------------------------------------------------------------------
+					//					mui.get('http://192.168.1.116:8002/Manage/ManagerView/Ashx/plusApp.ashx', {
+					//						category: 'news'
+					//					}, function(data) {
+					//						//获得服务器响应
+					//						mui.alert(JSON.stringify(data));
+					//					}, 'json');
+					//get最精简---------------------------------------------------------------
+					mui.getJSON('http://192.168.1.116:8002/Manage/ManagerView/Ashx/plusApp.ashx', {
+						category: 'news'
+					}, function(data) {
+						//获得服务器响应
+						mui.alert(JSON.stringify(data));
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>字段1：</label>
+					<input type="text" class="mui-input-clear" id="col1" placeholder="请输入" value="1">
+				</div>
+				<div class="mui-input-row">
+					<label>字段2：</label>
+					<input type="text" class="mui-input-clear" id="col2" placeholder="请输入">
+				</div>
+				<div class="mui-input-row">
+					<label>字段3：</label>
+					<input type="text" class="mui-input-clear" id="col3" placeholder="请输入">
+				</div>
+			</div>
+			<button type="button" id='bindOffbtn' class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">确定</button>
+		</div>
+	</body>
+
+</html>

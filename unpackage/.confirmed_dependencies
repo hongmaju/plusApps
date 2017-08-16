@@ -295,6 +295,13 @@
     "resources": [
       "js/mui.js",
       "css/mui.css"
+    ],
+    "refer": []
+  },
+  "AjaxPage.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
     ]
   }
 }
