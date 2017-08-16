@@ -269,5 +269,11 @@
       "fonts/mui.ttf"
     ],
     "refer": []
+  },
+  "extendPage.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
+    ]
   }
 }
