@@ -259,6 +259,15 @@
     "resources": [
       "js/mui.js",
       "css/mui.css"
-    ]
+    ],
+    "refer": []
+  },
+  "eachPage.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
   }
 }
