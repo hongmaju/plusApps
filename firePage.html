@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>自定义触发事件</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			//初始化预加载详情页面
+			mui.init({
+				preloadPages: [{
+					id: 'firePageB.html',
+					url: 'firePageB.html'
+				}]
+			});
+
+			var detailPage = null;
+			//添加列表项的点击事件
+			mui.plusReady(function() {
+				document.getElementById('bindOffbtn').addEventListener('tap', function() {
+					alert("单击");
+					var id = this.getAttribute('id');
+					//获得详情页面
+					if(!detailPage) {
+						detailPage = plus.webview.getWebviewById('firePageB.html');
+					}
+					//触发详情页面的newsId事件
+					mui.fire(detailPage, 'newsId', {
+						id: id
+					});
+					//打开详情页面          
+					mui.openWindow({
+						id: 'firePageB.html'
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+
+			<button type="button" id='bindOffbtn' class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">单击</button>
+
+		</div>
+	</body>
+
+</html>
