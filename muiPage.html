@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>muicss选择器获取HTML元素</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			//初始化预加载详情页面
+			mui.init();
+			//obj1是mui对象
+			var obj1 = mui("#bindOffbtn");
+			//obj2是dom对象
+			var obj2 = obj1[0];
+			mui("p");// 选取所有 < p > 元素
+			mui("p.title");//选取所有包含.title类的 < p > 元素
+			//如何取得标签的属性
+			//alert(mui("#bindOffbtn").attributes["aaa"]);//不能使用
+			//alert(mui("#bindOffbtn").aaa;//不能使用
+			//alert(obj1.attributes["aaa"]);//不能使用
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+
+			<button type="button" id='bindOffbtn' aaa="aaa" class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">单击</button>
+
+		</div>
+	</body>
+
+</html>
