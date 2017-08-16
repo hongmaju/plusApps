@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>os的用法</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			//初始化预加载详情页面
+			mui.init();
+
+			mui.plusReady(function() {
+				var btn = document.getElementById("bindOffbtn");
+				btn.addEventListener('tap', function() {
+					mui.alert("返回是否在 5 + App(包括流应用) 运行"+mui.os.plus);
+					mui.alert("返回是否为流应用"+mui.os.stream);
+					mui.alert("返回是否为安卓手机"+mui.os.android);
+					mui.alert("安卓版本号"+mui.os.version);
+					mui.alert("android非Chrome环境"+mui.os.isBadAndroid);
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>字段1：</label>
+					<input type="text" class="mui-input-clear" id="col1" placeholder="请输入" value="1">
+				</div>
+				<div class="mui-input-row">
+					<label>字段2：</label>
+					<input type="text" class="mui-input-clear" id="col2" placeholder="请输入">
+				</div>
+				<div class="mui-input-row">
+					<label>字段3：</label>
+					<input type="text" class="mui-input-clear" id="col3" placeholder="请输入">
+				</div>
+			</div>
+			<button type="button" id='bindOffbtn' class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">确定</button>
+		</div>
+	</body>
+
+</html>
