@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>later的用法</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			//初始化预加载详情页面
+			mui.init();
+
+			mui.plusReady(function() {
+				var btn = document.getElementById("bindOffbtn");
+				btn.addEventListener('tap', function() {
+					alert("0");
+					mui.later(function() {
+						alert("1");
+
+					}, 5000);
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>字段1：</label>
+					<input type="text" class="mui-input-clear" id="col1" placeholder="请输入" value="1">
+				</div>
+				<div class="mui-input-row">
+					<label>字段2：</label>
+					<input type="text" class="mui-input-clear" id="col2" placeholder="请输入">
+				</div>
+				<div class="mui-input-row">
+					<label>字段3：</label>
+					<input type="text" class="mui-input-clear" id="col3" placeholder="请输入">
+				</div>
+			</div>
+			<button type="button" id='bindOffbtn' class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">确定</button>
+		</div>
+	</body>
+
+</html>

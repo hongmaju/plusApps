@@ -274,6 +274,13 @@
     "resources": [
       "js/mui.js",
       "css/mui.css"
+    ],
+    "refer": []
+  },
+  "laterPage.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
     ]
   }
 }
