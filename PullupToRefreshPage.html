@@ -16,12 +16,12 @@
 						//auto: true, //可选,默认false.自动上拉加载一次
 						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
 						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						//callback: al
 						callback: function() { //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
 							alert("重新加载");
 							//1、加载完新数据后，必须执行如下代码，true表示没有更多数据了：
 							//2、若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
 							mui('#refreshContainer').pullRefresh().endPullupToRefresh();
-							
 
 							//重置上拉加载-注意：refresh()中需传入true
 							//mui('#pullup-container').pullRefresh().refresh(true);
@@ -33,6 +33,11 @@
 					}
 				}
 			});
+
+			function al() {
+				alert("重新加载");
+
+			}
 		</script>
 		<style type="text/css">
 			.mui-bar-nav~.mui-content .mui-pull-top-pocket {
