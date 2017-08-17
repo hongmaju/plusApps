@@ -302,6 +302,22 @@
     "resources": [
       "js/mui.js",
       "css/mui.css"
+    ],
+    "refer": []
+  },
+  "pullRefreshPage.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "pullRefreshPage1.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
     ]
   }
 }
