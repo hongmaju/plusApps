@@ -318,6 +318,24 @@
       "fonts/mui.ttf",
       "js/mui.js",
       "css/mui.css"
-    ]
+    ],
+    "refer": []
+  },
+  "pullRefreshPage2.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css",
+      "pullRefreshPage2b.html"
+    ],
+    "refer": []
+  },
+  "pullRefreshPage2b.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
   }
 }
