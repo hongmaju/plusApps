@@ -337,5 +337,11 @@
       "fonts/mui.ttf"
     ],
     "refer": []
+  },
+  "PullupToRefreshPage.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
+    ]
   }
 }

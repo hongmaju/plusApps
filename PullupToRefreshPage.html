@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>上拉加载</title>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						height: 50, //可选,默认50.触发下拉刷新拖动距离,
+						//auto: true, //可选,默认false.自动上拉加载一次
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: function() { //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+							alert("重新加载");
+							//1、加载完新数据后，必须执行如下代码，true表示没有更多数据了：
+							//2、若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+							mui('#refreshContainer').pullRefresh().endPullupToRefresh();
+							
+
+							//重置上拉加载-注意：refresh()中需传入true
+							//mui('#pullup-container').pullRefresh().refresh(true);
+							//禁用上拉刷新-pullup-container为在mui.init方法中配置的pullRefresh节点中的container参数；
+							//mui('#pullup-container').pullRefresh().disablePullupToRefresh();
+							//启用上拉刷新-pullup-container为在mui.init方法中配置的pullRefresh节点中的container参数；
+							//mui('#pullup-container').pullRefresh().enablePullupToRefresh();
+						}
+					}
+				}
+			});
+		</script>
+		<style type="text/css">
+			.mui-bar-nav~.mui-content .mui-pull-top-pocket {
+				top: 180px !important;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							待办事项1
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							待办事项2
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
