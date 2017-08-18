@@ -1763,7 +1763,8 @@
 			"helloMuiListInfoPage.html": {
 				"resources": [
 					"js/mui.js",
-					"css/mui.css"
+					"css/mui.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0

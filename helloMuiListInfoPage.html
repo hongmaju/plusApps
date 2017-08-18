@@ -11,33 +11,14 @@
 		<!--标准mui.css-->
 		<link rel="stylesheet" type="text/css" href="css/mui.css" />
 
-		<style>
-			p {
-				text-indent: 22px;
-				padding: 5px 8px;
-			}
-			
-			html,
-			body,
-			.mui-content {
-				background-color: #fff;
-			}
-			
-			h4 {
-				margin-left: 5px;
-			}
-			
-			.mui-plus header.mui-bar {
-				display: none;
-			}
-			
-			.mui-plus .mui-bar-nav~.mui-content {
-				padding: 0;
-			}
 		</style>
 		<script type="text/javascript">
 			mui.init();
 			mui.plusReady(function() {
+				
+
+				
+
 				//监听自定义事件，获取新闻详情
 				document.addEventListener('get_detail', function(event) {
 
@@ -52,6 +33,7 @@
 					var author = event.detail.author;
 					var time = event.detail.time;
 					document.getElementById('cover').innerText = cover + title + author + time;
+
 					plus.webview.currentWebview().show();
 
 					//向服务端请求文章详情内容
@@ -60,7 +42,7 @@
 						dataType: 'json', //服务器返回json格式数据
 						timeout: 15000, //15秒超时
 						success: function(rsp) {
-							document.getElementById('coverAjax').innerText =JSON.stringify(rsp);
+							document.getElementById('coverAjax').innerText = JSON.stringify(rsp);
 							//mui.alert(JSON.stringify(rsp));
 
 						},
@@ -71,31 +53,35 @@
 					});
 				});
 
-				document.getElementById('bindOffbtn').addEventListener('tap', function() {
-					alert("返回");
-					//重写返回逻辑， 返回时隐藏详情页webview
-					mui.back = function() {
-						plus.webview.currentWebview().hide("auto", 300);
-					}
-					//窗口隐藏时， 重置页面数据
-					var self = plus.webview.currentWebview();
-					self.addEventListener("hide", function(e) {
-						window.scrollTo(0, 0); //重置滚动条位置
-						//vm.resetData(); //重置页面数据
-					}, false);
-				});
+				mui.back = function() {
+					plus.webview.currentWebview().hide("auto", 300);
+				}
+				//窗口隐藏时， 重置页面数据
+				var self = plus.webview.currentWebview();
+				self.addEventListener("hide", function(e) {
+					//					alert("返回");
+					//					mui('#my_list').scroll().scrollToBottom();
+					//					mui('#my_list').scroll().scrollTo(0, 0, 100); //100毫秒滚动到顶
+					//					mui('.mui-content').pullRefresh().scrollTo(0, 0, 1000); //滚动到顶部
+					//					window.scrollTo(0, 1000);
+					//					window.scrollTo(0,0);
+					//window.scrollTo(0, 0); //重置滚动条位置
+					//vm.resetData(); //重置页面数据
+				}, false);
+
 			});
 		</script>
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">打开新页面</h1>
-			
-		</header>
+
 		<div class="mui-content">
-			<button type="button" id='bindOffbtn' class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">返回</button>
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">打开新页面</h1>
+
+			</header>
+
 			<ul class="mui-table-view" id="my_list">
 				<li class="mui-table-view-cell">
 					<div class="mui-slider-right mui-disabled">
@@ -143,6 +129,150 @@
 					</div>
 					<div class="mui-slider-handle" id="coverAjax">
 						待办事项5
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
 					</div>
 				</li>
 			</ul>
