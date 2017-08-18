@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<!--标准mui.css-->
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+
+		<style>
+			p {
+				text-indent: 22px;
+				padding: 5px 8px;
+			}
+			
+			html,
+			body,
+			.mui-content {
+				background-color: #fff;
+			}
+			
+			h4 {
+				margin-left: 5px;
+			}
+			
+			.mui-plus header.mui-bar {
+				display: none;
+			}
+			
+			.mui-plus .mui-bar-nav~.mui-content {
+				padding: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				//监听自定义事件，获取新闻详情
+				document.addEventListener('get_detail', function(event) {
+
+					var guid = event.detail.guid;
+					if(!guid) {
+						return;
+					}
+					//前页传入的数据，直接渲染，无需等待ajax请求详情后
+
+					var cover = event.detail.cover;
+					var title = event.detail.title;
+					var author = event.detail.author;
+					var time = event.detail.time;
+					document.getElementById('cover').innerText = cover + title + author + time;
+					plus.webview.currentWebview().show();
+
+					//向服务端请求文章详情内容
+					mui.ajax('http://192.168.1.116:8002/Manage/ManagerView/Ashx/plusApp.ashx', {
+						type: 'GET',
+						dataType: 'json', //服务器返回json格式数据
+						timeout: 15000, //15秒超时
+						success: function(rsp) {
+							document.getElementById('coverAjax').innerText =JSON.stringify(rsp);
+							//mui.alert(JSON.stringify(rsp));
+
+						},
+						error: function(xhr, type, errorThrown) {
+							mui.toast('获取文章内容失败');
+							//TODO 此处可以向服务端告警
+						}
+					});
+				});
+
+				document.getElementById('bindOffbtn').addEventListener('tap', function() {
+					alert("返回");
+					//重写返回逻辑， 返回时隐藏详情页webview
+					mui.back = function() {
+						plus.webview.currentWebview().hide("auto", 300);
+					}
+					//窗口隐藏时， 重置页面数据
+					var self = plus.webview.currentWebview();
+					self.addEventListener("hide", function(e) {
+						window.scrollTo(0, 0); //重置滚动条位置
+						//vm.resetData(); //重置页面数据
+					}, false);
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">打开新页面</h1>
+			
+		</header>
+		<div class="mui-content">
+			<button type="button" id='bindOffbtn' class='mui-btn mui-btn-danger' style="margin-top: 50px;margin-left: 50px;">返回</button>
+			<ul class="mui-table-view" id="my_list">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" id="cover">
+						待办事项0
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项1
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项2
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项3
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						待办事项4
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" id="coverAjax">
+						待办事项5
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+
+</html>

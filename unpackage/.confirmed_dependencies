@@ -342,6 +342,23 @@
     "resources": [
       "js/mui.js",
       "css/mui.css"
+    ],
+    "refer": []
+  },
+  "helloMuiListPage.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "helloMuiListInfoPage.html"
+    ]
+  },
+  "helloMuiListInfoPage.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
     ]
   }
 }
