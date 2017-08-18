@@ -15,9 +15,6 @@
 		<script type="text/javascript">
 			mui.init();
 			mui.plusReady(function() {
-				
-
-				
 
 				//监听自定义事件，获取新闻详情
 				document.addEventListener('get_detail', function(event) {
@@ -59,14 +56,18 @@
 				//窗口隐藏时， 重置页面数据
 				var self = plus.webview.currentWebview();
 				self.addEventListener("hide", function(e) {
+
 					//					alert("返回");
 					//					mui('#my_list').scroll().scrollToBottom();
 					//					mui('#my_list').scroll().scrollTo(0, 0, 100); //100毫秒滚动到顶
 					//					mui('.mui-content').pullRefresh().scrollTo(0, 0, 1000); //滚动到顶部
 					//					window.scrollTo(0, 1000);
 					//					window.scrollTo(0,0);
-					//window.scrollTo(0, 0); //重置滚动条位置
+					//					window.scrollTo(0, 0); //重置滚动条位置
 					//vm.resetData(); //重置页面数据
+					//					mui.scrollTop();
+					//mui('.mui-content').scroll().scrollTo(0, 0, 100); //100毫秒滚动到顶
+
 				}, false);
 
 			});
